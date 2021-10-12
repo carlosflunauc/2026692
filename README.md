@@ -6,26 +6,26 @@ Instalación Global del Entity Framework
 
 Actualizar el EF
 
-  dotnet tool update --global dotnet-ef
+  	dotnet tool update --global dotnet-ef
 
 Instalacion solucion EF
 
-  dotnet new sln -o Hospital
+  	dotnet new sln -o Hospital
   
 Instalar las carpetas MVC
-                                (Controlador)
-  dotnet new classlib -o Hospital.Persistencia
-                                (Modelo)
-  dotnet new classlib -o Hospital.Dominio
-                                 (Vista)
-  dotnet new webapp -o Hospital.Frontend
+                                
+	dotnet new classlib -o Hospital.Persistencia 	(Controlador)
+                                
+  	dotnet new classlib -o Hospital.Dominio 	(Modelo)
+                                 
+	dotnet new webapp -o Hospital.Frontend 		(Vista)
   
 En la carpeta de Persistencia instalamos los paquetes:
 
-dotnet add package Microsoft.EntityFrameworkCore --version 5.0.0
-dotnet add package Microsoft.EntityFrameworkCore.Tools --version 5.0.0
-dotnet add package Microsoft.EntityFrameworkCore.Design --version 5.0.0
-dotnet add package Microsoft.EntityFrameworkCore.SqlServer --version 5.0.0
+	dotnet add package Microsoft.EntityFrameworkCore --version 5.0.0
+	dotnet add package Microsoft.EntityFrameworkCore.Tools --version 5.0.0
+	dotnet add package Microsoft.EntityFrameworkCore.Design --version 5.0.0
+	dotnet add package Microsoft.EntityFrameworkCore.SqlServer --version 5.0.0
 
 Conexion con la base de datos:
 
