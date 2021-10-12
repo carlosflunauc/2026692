@@ -5,9 +5,11 @@ Instalación Global del Entity Framework
 	dotnet tool install --global dotnet-ef
 
 Actualizar el EF
-	dotnet tool update --global dotnet-ef
+
+  dotnet tool update --global dotnet-ef
 
 Instalacion solucion EF
+
   dotnet new sln -o Hospital
   
 Instalar las carpetas MVC
