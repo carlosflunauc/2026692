@@ -27,6 +27,12 @@ En la carpeta de Persistencia instalamos los paquetes:
 	dotnet add package Microsoft.EntityFrameworkCore.Design --version 5.0.0
 	dotnet add package Microsoft.EntityFrameworkCore.SqlServer --version 5.0.0
 
+Crear Referencias a otras carpetas:
+	dotnet add reference ..\Hospital.Dominio\
+	dotent add reference ..\Hospital.Persistencia\
+
+Crear Migraciones:
+		
 Conexion con la base de datos:
 
 // optionsBuilder.UseSqlServer("Inital Catalog=HospitalSenaData; Data Source=HOMELUNA; Integrated Security=true");

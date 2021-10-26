@@ -1,7 +1,7 @@
-using Microsoft.EntityFramework.Core;
-using Hospital.Dominio;
+using Microsoft.EntityFrameworkCore;
+using Hospital.Dominio.Entidades;
 
-namespace Hospital.Persistencia
+namespace Hospital.Persistencia.Repositorios
 {
     public class AppContext : DbContext
     {
@@ -9,13 +9,13 @@ namespace Hospital.Persistencia
         public DbSet<Paciente> Pacientes {get; set;}
         public DbSet<Medico> Medicos {get; set;}
         public DbSet<SignoVital> SignosVitales {get; set;}
-      protected override void OnConfiguring(DbContextOptionBuilder optionsBuilder)
+      protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    {
+      if (!optionsBuilder.IsConfigured)
       {
-          if (!optionsBuilder.IsConfigured)
-          {
-              optionsBuilder.UseSqlServer("Inital Catalog=HospitalSenaData; Data Source=HOMELUNA; Integrated Security=true");
+          optionsBuilder.UseSqlServer("Inital Catalog=HospitalSenaData; Data Source=HOMELUNA; Integrated Security=true");
               //optionsBuilder.UseSqlServer("Data Source=(localdb)\\Nombre_Servidor; Initial Catalog=HospitalSenaData");
           }
-      }  //dotnet add package Microsoft.EntityFrameworkCore --version 5.0.0 
+      }  
     }
 }
