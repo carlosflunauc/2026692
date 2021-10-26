@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
+using Hospital.Dominio;
+using Hospital.Persistencia;
 
 namespace Hospital.Consola
 {
